@@ -32,3 +32,35 @@ jobs:
         run: |
           npm run build
           node apps/cli/dist/index.js scan .
+
+  action:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Run the action on a golden snapshot
+        id: euscan
+        uses: ./
+        with:
+          path: e2e/golden/umami/snapshot
+
+      - name: Check the grade output
+        env:
+          GRADE: ${{ steps.euscan.outputs.grade }}
+        run: |
+          echo "grade=$GRADE"
+          case "$GRADE" in A|B|C|D|E) ;; *) echo "unexpected grade"; exit 1 ;; esac
+
+      - name: fail-on must fail when the bucket is present
+        id: failing
+        continue-on-error: true
+        uses: ./
+        with:
+          path: e2e/golden/calcom/snapshot
+          fail-on: personal-data
+
+      - name: Check that fail-on failed
+        env:
+          OUTCOME: ${{ steps.failing.outcome }}
+        run: test "$OUTCOME" = "failure"
