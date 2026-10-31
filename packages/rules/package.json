@@ -9,5 +9,5 @@
   "types": "dist/index.d.ts",
   "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
   "files": ["dist", "services", "alternatives"],
-  "dependencies": { "@euscan/shared": "*", "yaml": "^2.5.0", "zod": "^3.23.0" }
+  "dependencies": { "@euscan/shared": "*", "yaml": "^2.5.0", "zod": "^4.6.7" }
 }
