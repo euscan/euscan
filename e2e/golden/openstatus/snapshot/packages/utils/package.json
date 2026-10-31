@@ -1,0 +1,24 @@
+{
+  "name": "@openstatus/utils",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openstatus/assertions": "workspace:*",
+    "@openstatus/regions": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/test-utils": "workspace:*",
+    "@openstatus/tsconfig": "workspace:*",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

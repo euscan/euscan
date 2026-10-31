@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: pusher
+name: Pusher
+category: observability
+status: draft
+bucket: personal-data
+owner:
+  company: "Pusher Limited"
+  hq_country: GB
+  parent_company: "Bird (formerly MessageBird), Netherlands tax base"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: partly
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected AWS cluster"]
+  notes: "Pusher Limited is registered in England and Wales (No. 07489873), registered office at MessageBird UK Limited; since 28 February 2022 services are provided under Bird's general terms (contracting entity [TO VERIFY]). The UK has an EU adequacy decision. Bird moved most operations to hubs in the US, Singapore and Dubai in 2025, keeping a Dutch tax base. Channels clusters run on AWS; the 'eu' cluster is AWS eu-west-1 (Ireland)."
+detect:
+  npm: ["pusher", "pusher-js", "@pusher/*"]
+  pypi: ["pusher"]
+  env: ["PUSHER_APP_ID", "PUSHER_KEY", "PUSHER_SECRET", "PUSHER_APP_KEY", "PUSHER_APP_SECRET", "PUSHER_CLUSTER", "PUSHER_APP_CLUSTER"]
+  domains: ["pusher.com", "pusherapp.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: []
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://pusher.com/docs/clusters
+    claim: "Channels offers a cluster in eu-west-1, an AWS datacenter located in Ireland (provider's own docs)"
+  - url: https://pusher.com/legal-archived/our-promise/
+    claim: "Terms before 28 February 2022 archived; Pusher is now a Bird company (provider's own page)"
+  - url: https://nltimes.nl/node/78602
+    claim: "Bird (formerly MessageBird) leaving the Netherlands for global hubs in New York, San Francisco, Austin, Singapore and Dubai (news report)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,27 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: ovhcloud
+name: OVHcloud
+category: cloud-infra
+owner:
+  company: "OVH SAS"
+  hq_country: FR
+url: https://www.ovhcloud.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Fewer managed higher-level services than the US hyperscalers"
+hosting:
+  - provider: "OVH SAS"
+    provider_country: FR
+    locations: [FR, DE, PL]
+notes: "Roubaix-based, parent OVH Groupe SA listed on Euronext Paris. Own data centers in France, Germany, Poland and elsewhere in Europe, plus regions outside the EU. Operates a US subsidiary (OVHcloud US, LLC) for its North American data centers; choose EU regions. Some offers are SecNumCloud-qualified by ANSSI."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://sota.io/blog/ovhcloud-eu-alternative-iaas-gdpr-cloud-act-2026
+    claim: "OVHcloud SAS, Roubaix; French parent; US subsidiary for the Hillsboro, Oregon data center; SecNumCloud qualification (third-party)"
+  - url: https://annuaire-entreprises.data.gouv.fr/entreprise/424761419
+    claim: "French company register entry for OVH (official register, as reported by a cross-checking AI; to verify)"
+last_verified_at: 2026-10-31

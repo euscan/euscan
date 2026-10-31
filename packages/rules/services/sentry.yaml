@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: sentry
+name: Sentry
+category: error-tracking
+status: draft
+bucket: personal-data
+owner:
+  company: "Functional Software, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US (default)", "EU (Frankfurt, optional data storage location)"]
+  notes: "Every organisation can choose US or EU storage; some data may still be stored in the US per Sentry's documentation. The provider stays a US company and relies on the EU-US Data Privacy Framework."
+detect:
+  npm: ["@sentry/*"]
+  pypi: ["sentry-sdk"]
+  env: ["SENTRY_DSN", "NEXT_PUBLIC_SENTRY_DSN"]
+  domains: ["sentry.io", "de.sentry.io"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [bugsink]
+migration_effort: low
+confidence: inferred
+sources:
+  - url: https://intercom.help/sentryio/en/articles/13964378
+    claim: "EU data centre in Frankfurt; some data may stay in the US (provider's help centre)"
+  - url: https://sentry.io/trust/privacy/
+    claim: "EU region option and EU-US Data Privacy Framework (provider's own page)"
+last_verified_at: 2026-10-31

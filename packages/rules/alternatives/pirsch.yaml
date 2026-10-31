@@ -1,0 +1,31 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: pirsch
+name: Pirsch Analytics
+category: analytics
+owner:
+  company: "Emvi Software GmbH"
+  hq_country: DE
+url: https://pirsch.io
+open_source: true
+self_hostable: true
+feature_gaps:
+  - "Web analytics only: no session replay, feature flags or in-depth product analytics"
+hosting:
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [DE]
+notes: "Run by Emvi Software GmbH, Rheda-Wiedenbrück (HRB 11575, local court Gütersloh). Cookie-free; core library is open source. Hosted on German-owned servers at Hetzner; the privacy policy says data is in principle stored only on servers in Germany."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://docs.pirsch.io/
+    claim: "Pirsch is made in the EU and hosted on German owned servers at Hetzner (provider's own docs)"
+  - url: https://pirsch.io/privacy
+    claim: "Hetzner Online GmbH, Gunzenhausen, data center / web hosting; data in principle stored only on servers in Germany (provider's own privacy policy)"
+  - url: https://european-alternatives.eu/product/pirsch
+    claim: "Hosted in the EU with Hetzner (third-party directory)"
+  - url: https://europeanpurpose.com/compare/plausible-vs-pirsch
+    claim: "Emvi Software GmbH, Rheda-Wiedenbrück, HRB 11575 (third-party summary of provider's legal notice)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,33 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: crisp
+name: Crisp
+category: support-chat
+owner:
+  company: "Crisp IM SAS"
+  hq_country: FR
+url: https://crisp.chat
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Smaller ecosystem and fewer enterprise workflow features than Intercom or Zendesk"
+hosting:
+  - provider: "DigitalOcean, LLC"
+    provider_country: US
+    locations: [NL, DE]
+  - provider: "Amazon Web Services, Inc."
+    provider_country: US
+    locations: [IE]
+  - provider: "Scaleway"
+    provider_country: FR
+    locations: [FR]
+notes: "French company in Nantes. Its own sub-processor list shows customer data held in the EU, but on US-owned hosting providers DigitalOcean (Netherlands, Germany) and AWS (Ireland), plus Scaleway (France) for AI features. Cloudflare (US) handles DNS/CDN without holding data. Optional AI providers (OpenAI, Gemini, Anthropic) process data only if enabled."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://crisp.chat/de/sub-processors/
+    claim: "Hosting sub-processors DigitalOcean (US company, data in EU NL+DE), AWS (US company, data in EU IE), Scaleway (FR); Cloudflare holds no data (provider's own page)"
+  - url: https://www.datarequests.org/company/crisp/
+    claim: "Crisp IM SAS, 2 Boulevard de Launay, 44100 Nantes, France (third-party privacy directory)"
+last_verified_at: 2026-10-31

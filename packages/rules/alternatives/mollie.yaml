@@ -1,0 +1,29 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: mollie
+name: Mollie
+category: payments
+owner:
+  company: "Mollie B.V."
+  hq_country: NL
+url: https://www.mollie.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Focused on European payment methods; fewer global payment methods and fewer adjacent products than Stripe"
+hosting:
+  - provider: "Google Cloud Platform"
+    provider_country: US
+    locations: [BE, NL, DE, FI]
+notes: "Dutch payment institution regulated by De Nederlandsche Bank. Mollie migrated its application infrastructure to Google Cloud. Its sub-processor page lists Google Cloud Platform in EU regions (Belgium, Netherlands, Germany, Finland; EU multi-region for disputes) for dashboard hosting and dispute data. Basefarm is also listed for hosting on the processors page. The company is EU, but the main infrastructure provider is US-owned."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.mollie.com/legal/sub-processors
+    claim: "Google Cloud Platform: EU (Belgium, the Netherlands, Germany and Finland) for dashboard hosting; EU multi-region for dispute evidence and logs (provider's own page)"
+  - url: https://www.mollie.com/fr/processors
+    claim: "Google Cloud Platform listed as processor for cloud computing services; Basefarm listed for hosting (provider's own page)"
+  - url: https://cloud.google.com/customers/mollie
+    claim: "Mollie is migrating its application services to Google Cloud (Google case study)"
+last_verified_at: 2026-10-31

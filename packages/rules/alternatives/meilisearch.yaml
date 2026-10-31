@@ -1,0 +1,26 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: meilisearch
+name: Meilisearch
+category: search
+owner:
+  company: "Meilisearch SAS"
+  hq_country: FR
+url: https://www.meilisearch.com
+open_source: true
+self_hostable: true
+feature_gaps:
+  - "Fewer merchandising, AI ranking and analytics features than Algolia"
+hosting:
+  - provider: "Amazon Web Services"
+    provider_country: US
+notes: "French company; the engine is open source and a single binary that can be self-hosted on EU infrastructure. Meilisearch Cloud migrated from DigitalOcean to AWS (EKS), per an AWS case study, so the managed service runs on a US-owned provider; regions are customer-selectable [TO VERIFY region list]."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://aws.amazon.com/solutions/case-studies/meilisearch-case-study
+    claim: "Meilisearch moved its SaaS infrastructure from DigitalOcean to AWS (AWS case study)"
+  - url: https://meilisearch.com/docs/resources/self_hosting/overview
+    claim: "Single binary, can be self-hosted for data residency compliance (provider's own docs)"
+last_verified_at: 2026-10-31

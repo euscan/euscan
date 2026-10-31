@@ -1,0 +1,27 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: unleash
+name: Unleash
+category: feature-flags
+owner:
+  company: "Bricks Software AS"
+  hq_country: "NO"
+url: https://www.getunleash.io
+open_source: true
+self_hostable: true
+feature_gaps:
+  - "Fewer built-in experimentation and analytics features than LaunchDarkly"
+hosting:
+  - provider: "Amazon Web Services"
+    provider_country: US
+    locations: [DE, IE, FR, SE]
+notes: "Norwegian company (EEA). Unleash Cloud runs in AWS regions chosen by the customer, including Frankfurt, Ireland, Paris and Stockholm (London and US/Asia regions also exist), so the infrastructure provider is US-owned. The open-source edition can be self-hosted on EU infrastructure."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://docs.getunleash.io/deploy/hosting-options
+    claim: "Cloud-hosted regions include eu-central-1, eu-west-1, eu-west-2, eu-west-3, eu-north-1 (provider's own docs)"
+  - url: https://sourceforge.net/software/product/Unleash
+    claim: "Company information: Bricks Software AS, Norway (third-party listing)"
+last_verified_at: 2026-10-31

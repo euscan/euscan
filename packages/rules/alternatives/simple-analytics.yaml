@@ -1,0 +1,34 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: simple-analytics
+name: Simple Analytics
+category: analytics
+owner:
+  company: "Simple Analytics B.V."
+  hq_country: NL
+url: https://www.simpleanalytics.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Intentionally minimal: limited events and funnels, no product analytics"
+hosting:
+  - provider: "Worldstream"
+    provider_country: NL
+    locations: [NL]
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [DE]
+  - provider: "Bunny"
+    provider_country: SI
+notes: "Amsterdam-based, cookie-free. Analytics data is collected, processed and stored by EU-based providers, primary infrastructure in the Netherlands (Worldstream), plus Hetzner (Germany) and Bunny (CDN/DNS, Slovenia). Leaseweb (NL) and DigitalOcean (US company, Amsterdam data center, no visitor data) are listed as legacy services being moved."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.simpleanalytics.com/subprocessors
+    claim: "Analytics data collected, processed and stored by EU-based providers; primary infrastructure in the Netherlands; Worldstream, Hetzner, Bunny; Leaseweb and DigitalOcean legacy (provider's own page)"
+  - url: https://european-alternatives.eu/product/simple-analytics
+    claim: "Hosted in the EU with Leaseweb (third-party directory)"
+  - url: https://europeanpurpose.com/compare/plausible-vs-simple-analytics
+    claim: "Simple Analytics B.V., Amsterdam, founded 2018, European-owned EU servers (third-party summary of provider's about page)"
+last_verified_at: 2026-10-31

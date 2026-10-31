@@ -1,0 +1,15 @@
+{
+  "repo": "formbricks/formbricks",
+  "commit": "4a76e22e8246314afd524453095aea085a10709f",
+  "mustFind": [
+    "aws",
+    "azure",
+    "google-cloud",
+    "posthog",
+    "sentry",
+    "stripe"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "@aws-sdk/client-s3 and @ai-sdk/amazon-bedrock (aws), @ai-sdk/azure for Azure OpenAI (azure), @ai-sdk/google-vertex (google-cloud), posthog-js, posthog-node (posthog), @sentry/nextjs (sentry), stripe and STRIPE_SECRET_KEY (stripe). googleapis is used for Google Sheets (Workspace), not Google Cloud."
+}

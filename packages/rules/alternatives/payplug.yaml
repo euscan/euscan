@@ -1,0 +1,24 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: payplug
+name: PayPlug
+category: payments
+owner:
+  company: "PAYPLUG ENTERPRISE SAS"
+  hq_country: FR
+url: https://www.payplug.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Focused on French and southern European merchants; smaller API ecosystem than Stripe"
+hosting: []
+notes: "French payment provider owned by Groupe BPCE (via Natixis, merged with Dalenys). Its legal page names VINC SAS (France) as website host; the infrastructure behind payment processing [TO VERIFY]. RCS Paris 443 222 682 per two cross-checking AIs."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.frenchweb.fr/natixis-groupe-bpce-rachete-payplug-et-se-reorganise-autour-de-ses-fintech/265545
+    claim: "Natixis (Groupe BPCE) took a majority stake in PayPlug (news report)"
+  - url: https://banque.meilleurtaux.com/comparateur-banque/frais-bancaires/actualites/2022-septembre/bpce-vers-fusion-payplug-dalenys.html
+    claim: "BPCE subsidiaries PayPlug and Dalenys merged (news report)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,31 @@
+{
+  "name": "@openstatus/notification-emails",
+  "version": "0.0.0",
+  "description": "Log drains Vercel integration.",
+  "main": "src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@openstatus/db": "workspace:*",
+    "@openstatus/emails": "workspace:*",
+    "@openstatus/notification-base": "workspace:*",
+    "@openstatus/regions": "workspace:*",
+    "@openstatus/tinybird": "workspace:*",
+    "@openstatus/utils": "workspace:*",
+    "@t3-oss/env-core": "catalog:",
+    "react-dom": "catalog:",
+    "resend": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/test-utils": "workspace:*",
+    "@openstatus/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

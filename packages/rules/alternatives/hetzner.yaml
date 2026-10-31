@@ -1,0 +1,27 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: hetzner
+name: Hetzner Cloud
+category: cloud-infra
+owner:
+  company: "Hetzner Online GmbH"
+  hq_country: DE
+url: https://www.hetzner.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Mostly raw infrastructure (servers, volumes, load balancers, object storage); few managed services"
+hosting:
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [DE, FI]
+notes: "German company in Gunzenhausen with own data centers in Germany and Finland. Also offers locations in the US and Singapore; choose the EU locations."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://sota.io/blog/ovhcloud-eu-alternative-iaas-gdpr-cloud-act-2026
+    claim: "Hetzner Online GmbH, Gunzenhausen, Germany (third-party)"
+  - url: https://european-alternatives.eu/product/pirsch
+    claim: "Hetzner used as an EU hosting provider (third-party directory)"
+last_verified_at: 2026-10-31

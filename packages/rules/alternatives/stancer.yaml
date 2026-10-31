@@ -1,0 +1,27 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: stancer
+name: Stancer
+category: payments
+owner:
+  company: "Iliad78 SAS (Stancer)"
+  hq_country: FR
+url: https://www.stancer.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Mainly France-focused; fewer payment methods, countries and developer tools than Stripe"
+hosting:
+  - provider: "Scaleway SAS"
+    provider_country: FR
+    locations: [FR]
+notes: "French payment institution licensed by the ACPR, a subsidiary of the Iliad group (same group as Scaleway). Two cross-checking AIs quote its security docs saying all data is hosted in France with Scaleway and OP CORE (Iliad's data-center company); Scaleway confirms the partnership. RCS Paris 834 315 673 per a cross-checking AI [TO VERIFY]."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://scaleway.com/en/blog/the-value-we-bring-is-heightened-reliability-and-advanced-security-thats-why-we-partnered-with-scaleway-interview-with-stancers-george-owen
+    claim: "Stancer is a payment services provider within the iliad Group that partnered with Scaleway for hosting (Scaleway's own blog, interview with Stancer CEO)"
+  - url: https://www.floabank.fr/images/espace-presse/CP/20240515_CP_MicrosoftTeams_BNP_Paribas_Stancer.pdf
+    claim: "Created in 2018, subsidiary of the Iliad group, licensed by the ACPR as a payment institution (press release)"
+last_verified_at: 2026-10-31

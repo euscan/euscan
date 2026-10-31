@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: twilio
+name: Twilio
+category: sms-voice
+status: draft
+bucket: personal-data
+owner:
+  company: "Twilio Ireland Limited"
+  hq_country: IE
+  parent_company: "Twilio Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "New EU customers contract with Twilio Ireland Limited by default; Twilio Inc. in the US acts as a group sub-processor. Workloads run in the US1 region by default. The Ireland (IE1) region offers EU data residency for selected products (Voice, SMS, TaskRouter, Studio); carrier routing, support and account data can still leave the EU."
+detect:
+  npm: ["twilio", "@twilio/*"]
+  pypi: ["twilio"]
+  env: ["TWILIO_*"]
+  domains: ["api.twilio.com", "api.dublin.ie1.twilio.com"]
+  docker_images: []
+  terraform_providers: ["twilio/twilio"]
+  github_actions: []
+alternatives: [sinch]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://twilio.com/blog/expanded-data-protection-options-eu-schrems-ii
+    claim: "New EU customers are contracted through Twilio's EU entity by default; Voice data residency in Ireland (provider's own blog)"
+  - url: https://static0.twilio.com/docs/global-infrastructure/sms-eu-data-residency
+    claim: "SMS sent via the Ireland (IE1) region is processed and stored there for EU data residency (provider's own docs)"
+last_verified_at: 2026-10-31

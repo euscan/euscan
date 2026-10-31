@@ -1,0 +1,28 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: adyen
+name: Adyen
+category: payments
+owner:
+  company: "Adyen N.V."
+  hq_country: NL
+url: https://www.adyen.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Aimed at larger merchants; minimum invoice and a sales-led onboarding instead of instant self-serve"
+hosting:
+  - provider: "Adyen N.V."
+    provider_country: NL
+notes: "Amsterdam-based, publicly listed. Runs its own servers; main systems in data centers in Europe, the US and APAC, with payments stored in Europe (and an isolated India environment). Since 1 September 2026 Amazon Web Services, Google, Microsoft and Oracle are listed sub-processors for cloud infrastructure; Adyen says core payment processing is not moving to the cloud and processing locations are unchanged."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.adyen.com/en_AU/infrastructure
+    claim: "Adyen administers its own servers; payments stored in Europe and an isolated India environment; no public cloud for payment processing (provider's own page)"
+  - url: https://www.adyen.com/nl_NL/legal/list-of-adyen-subprocessors
+    claim: "AWS, Google LLC, Microsoft and Oracle added as sub-processors effective 1 September 2026 (provider's own page)"
+  - url: https://help.adyen.com/updates/adyen-sub-processor-update
+    claim: "Core payment processing not moving to the cloud; current processing locations not changing (provider's own FAQ)"
+last_verified_at: 2026-10-31

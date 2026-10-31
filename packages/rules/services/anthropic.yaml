@@ -1,0 +1,34 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: anthropic
+name: Anthropic API
+category: ai-llm
+status: verified
+bucket: personal-data
+owner:
+  company: "Anthropic Ireland, Limited"
+  hq_country: IE
+  parent_company: "Anthropic, PBC (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Anthropic Ireland, Limited contracts with customers in the EEA, Switzerland and UK; the parent is Anthropic, PBC in the US. The first-party API offers inference_geo values 'us' or 'global' only, with no EU-only option. EU residency is available only through third-party clouds (AWS Bedrock or Google Vertex AI EU regions)."
+detect:
+  npm: ["@anthropic-ai/*", "@ai-sdk/anthropic", "@langchain/anthropic"]
+  pypi: ["anthropic", "langchain-anthropic"]
+  env: ["ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL"]
+  domains: ["api.anthropic.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [mistral]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://www.anthropic.com/legal/commercial-terms
+    claim: "\"Anthropic\" means Anthropic Ireland, Limited if Customer resides in the EEA, Switzerland or UK, and Anthropic, PBC elsewhere (provider's own terms)"
+  - url: https://platform.claude.com/docs/en/build-with-claude/data-residency
+    claim: "inference_geo supports us or global; no EU option on the first-party API (provider's own docs)"
+last_verified_at: 2026-10-31

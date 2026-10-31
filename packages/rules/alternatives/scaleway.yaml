@@ -1,0 +1,29 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: scaleway
+name: Scaleway
+category: cloud-infra
+owner:
+  company: "Scaleway SAS"
+  hq_country: FR
+url: https://www.scaleway.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Smaller service catalog than AWS, Google Cloud or Azure; fewer managed services and regions"
+hosting:
+  - provider: "Scaleway SAS"
+    provider_country: FR
+    locations: [FR, NL, PL, IT]
+notes: "Subsidiary of the French Iliad group (Euronext Paris). Regions Paris (PAR1-3), Amsterdam (AMS1-3), Warsaw (WAW1-3) and Milan (MIL1); product availability varies by zone. Offers instances, Kubernetes, serverless, object storage and hosted generative-AI APIs."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.scaleway.com/en/docs/account/reference-content/products-availability/
+    claim: "Availability Zones Paris PAR1-3, Amsterdam AMS1-3, Warsaw WAW1-3, Milan MIL1 (provider's own docs)"
+  - url: https://en.wikipedia.org/wiki/Scaleway
+    claim: "Formerly Online SAS, headquartered in Paris, majority-owned subsidiary of the Iliad group (third-party)"
+  - url: https://europeanpurpose.com/compare/ovhcloud-vs-scaleway
+    claim: "Legal notice names SCALEWAY SAS, SIREN 433 115 904, RCS Paris, subsidiary of the iliad Group (third-party summary of provider's legal notice)"
+last_verified_at: 2026-10-31

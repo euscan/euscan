@@ -1,0 +1,8 @@
+{
+  "repo": "umami-software/umami",
+  "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
+  "mustFind": [],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "Self-hosted privacy analytics. Only @netlify/plugin-nextjs, as a devDependency, references a catalog service; it must be reported as noise only. Expected grade A."
+}

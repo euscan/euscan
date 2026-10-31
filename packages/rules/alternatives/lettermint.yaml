@@ -1,0 +1,22 @@
+# Example entry. Status: facts to verify on the provider's own legal pages.
+id: lettermint
+name: Lettermint
+category: email-transactional
+owner:
+  company: "Lettermint B.V."
+  hq_country: NL
+url: https://lettermint.co
+open_source: false
+self_hostable: false
+feature_gaps: []
+notes: "Dutch private limited company, Chamber of Commerce (KvK) number 99337711, Willemsvaart 16 B, 8019 AB Zwolle. Hosting providers not yet recorded."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://lettermint.co/terms-of-service
+    claim: "Lettermint B.V., registered with the Dutch Chamber of Commerce under number 99337711, established in Zwolle (provider's own terms, section 1.1.13)"
+  - url: https://lettermint.co/compare/resend-alternative
+    claim: "EU-based infrastructure, built and hosted in Europe (provider's own page)"
+last_verified_at: 2026-10-31

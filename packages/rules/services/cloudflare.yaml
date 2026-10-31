@@ -1,0 +1,34 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: cloudflare
+name: Cloudflare
+category: cdn
+status: verified
+bucket: personal-data
+owner:
+  company: "Cloudflare, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["global"]
+  notes: "The Data Processing Addendum is with Cloudflare, Inc. (US). Traffic is handled on a global edge network; by default no metadata boundary applies. The Data Localization Suite (Regional Services, Customer Metadata Boundary set to EU, Geo Key Manager) keeps decryption and logs in the EU, but is available to Enterprise customers only."
+detect:
+  npm: ["cloudflare", "wrangler", "@cloudflare/*"]
+  pypi: ["cloudflare"]
+  env: ["CLOUDFLARE_*", "NEXT_PUBLIC_CLOUDFLARE_*", "CF_API_TOKEN"]
+  domains: ["api.cloudflare.com", "workers.dev", "pages.dev", "r2.cloudflarestorage.com"]
+  docker_images: []
+  terraform_providers: ["cloudflare/cloudflare"]
+  github_actions: ["cloudflare/wrangler-action"]
+alternatives: [bunny]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://cf-assets.www.cloudflare.com/slt3lc6tev37/33zd4ZHJyP8tADGLBSUGB7/8cb20da3929645487342eed96bedd898/Cloudflare_Customer_DPA_v6.2_Nov_9_2023.pdf
+    claim: "Data Processing Addendum between Cloudflare, Inc. and the customer (provider's own document, v6.2)"
+  - url: https://developers.cloudflare.com/data-localization/metadata-boundary/faq/
+    claim: "Customer Metadata Boundary is currently available for Enterprise customers as part of the Data Localization Suite (provider's own docs)"
+last_verified_at: 2026-10-31

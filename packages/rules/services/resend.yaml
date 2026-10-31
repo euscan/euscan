@@ -1,0 +1,34 @@
+# Example entry. Status draft: facts must be checked against official sources before "verified".
+id: resend
+name: Resend
+category: email-transactional
+status: draft
+bucket: personal-data
+owner:
+  company: "Plus Five Five, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US", "EU (sending region optional)"]
+  notes: "Per third-party comparison: account data, metadata and logs stay in the US even when sending from the EU region. Verify on Resend's own documentation."
+detect:
+  npm: ["resend"]
+  pypi: ["resend"]
+  env: ["RESEND_API_KEY"]
+  domains: ["api.resend.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [lettermint, ahasend]
+migration_effort: low
+confidence: inferred
+sources:
+  - url: https://resend.com/legal/dpa
+    claim: "Legal entity Plus Five Five, Inc., San Francisco, CA, USA (provider's own DPA)"
+  - url: https://nuntly.com/alternatives/resend-eu
+    claim: "EU sending region; account data and logs in the US (third-party source)"
+last_verified_at: 2026-10-31

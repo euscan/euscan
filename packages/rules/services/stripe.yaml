@@ -1,0 +1,36 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: stripe
+name: Stripe
+category: payments
+status: verified
+bucket: personal-data
+owner:
+  company: "Stripe Payments Europe, Limited"
+  hq_country: IE
+  parent_company: "Stripe, Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["global"]
+  notes: "EEA businesses contract with Stripe Payments Europe, Limited (Dublin), which is also the DPA party outside the Americas; Stripe Technology Company Limited (Ireland) is the main GDPR establishment. Stripe, LLC in the US is the controller for most Americas activity and the group parent is US-based. When EEA personal data is transferred to Stripe in the US, Stripe, LLC receives it under the EU-US Data Privacy Framework. No EU-only storage option was found on Stripe's official pages."
+detect:
+  npm: ["stripe", "@stripe/*"]
+  pypi: ["stripe"]
+  env: ["STRIPE_SECRET_KEY", "STRIPE_PUBLISHABLE_KEY", "STRIPE_WEBHOOK_SECRET", "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"]
+  domains: ["api.stripe.com", "js.stripe.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [mollie, adyen]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://stripe.com/nl/legal/dta
+    claim: "Personal data transferred from the EEA, UK or Switzerland to Stripe in the United States is received by Stripe, LLC under the Data Privacy Framework (provider's own data transfer addendum)"
+  - url: https://stripe.com/legal/legal-process-guide
+    claim: "Contracting entity for EEA countries is Stripe Payments Europe, Limited, One Wilton Park, Dublin (provider's own page)"
+  - url: https://stripe.com/ch/privacy-center/legal
+    claim: "Outside the Americas the DPA is with SPEL; in the Americas with Stripe, LLC (provider's own page)"
+last_verified_at: 2026-10-31

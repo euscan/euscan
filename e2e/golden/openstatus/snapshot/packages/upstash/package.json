@@ -1,0 +1,22 @@
+{
+  "name": "@openstatus/upstash",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@upstash/qstash": "catalog:",
+    "@upstash/redis": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/test-utils": "workspace:*",
+    "@openstatus/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

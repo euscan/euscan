@@ -1,0 +1,24 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: mangopay
+name: Mangopay
+category: payments
+owner:
+  company: "Mangopay S.A."
+  hq_country: LU
+url: https://mangopay.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Built for marketplaces and platforms (wallets, split payments), not a general checkout for single merchants"
+hosting: []
+notes: "Luxembourg e-money institution supervised by the CSSF (RCS B173459). Majority-owned since 2022 by Advent International, a US private-equity firm, with Crédit Mutuel Arkéa as minority shareholder. Payment-data hosting [TO VERIFY]; its website is hosted on Netlify (US)."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://siliconcanals.com/advent-acquires-mangopay/
+    claim: "US-based Advent International became majority shareholder of Luxembourg-based Mangopay; Crédit Mutuel Arkéa stays minority (news report)"
+  - url: https://europeanstack.pages.dev/software/mangopay
+    claim: "Licensed e-money institution regulated by Luxembourg's CSSF (third-party directory)"
+last_verified_at: 2026-10-31

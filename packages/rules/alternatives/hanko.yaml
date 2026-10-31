@@ -1,0 +1,34 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: hanko
+name: Hanko
+category: auth
+owner:
+  company: "Hanko GmbH"
+  hq_country: DE
+url: https://www.hanko.io
+open_source: true
+self_hostable: true
+feature_gaps: []
+hosting:
+  - provider: "Amazon Web Services"
+    provider_country: US
+    locations: [DE]
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [DE]
+  - provider: "adesso as a service GmbH"
+    provider_country: DE
+    locations: [DE]
+notes: "Hanko's DPA lists Amazon Web Services EMEA SARL (hosting, databases, storage, backups and email via Amazon SES), adesso as a service GmbH (managed operations) and Hetzner Online GmbH (hosting) as subprocessors, all processing in Germany. AWS is part of a US group. The DPA notes a listed subprocessor may not yet process customer data. Self-hosting avoids these providers."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.hanko.io/dpa
+    claim: "Subprocessors Amazon Web Services EMEA SARL, adesso as a service GmbH and Hetzner Online GmbH, processing location Germany (provider's own DPA)"
+  - url: https://european-alternatives.eu/de/produkt/hanko
+    claim: "Hanko Cloud hosted on AWS Frankfurt across three availability zones (third-party directory)"
+  - url: https://hanko.io/llms.txt
+    claim: "Hanko GmbH, Germany; open source; self-hosted or EU-based SaaS (provider's own file)"
+last_verified_at: 2026-10-31

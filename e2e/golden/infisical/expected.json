@@ -1,0 +1,17 @@
+{
+  "repo": "Infisical/infisical",
+  "commit": "d9799b72730a11dbf54cfa3ff8540e6f7e66c058",
+  "mustFind": [
+    "aws",
+    "datadog",
+    "google-cloud",
+    "openai",
+    "posthog",
+    "sentry"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [
+    "mongodb-atlas"
+  ],
+  "notes": "backend/package.json: many @aws-sdk/* clients (aws), @google-cloud/kms (google-cloud), @openai/agents and OPENAI_API_KEY (openai), posthog-node and POSTHOG_* (posthog), dd-trace and DATADOG_* (datadog); SENTRY_DSN in the env template (sentry). Integrations that connect to customers' own accounts (INF_APP_CONNECTION_AZURE_*, INF_APP_CONNECTION_STRIPE_*, the mongodb driver for rotating secrets in customer databases) are not Infisical's own processors and are not counted; @azure/identity appears only in an overrides block. Known false positive: mongodb-atlas, recorded in knownFalsePositives."
+}

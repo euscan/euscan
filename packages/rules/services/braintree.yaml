@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: braintree
+name: Braintree
+category: payments
+status: draft
+bucket: known-exposure
+owner:
+  company: "PayPal (Europe) S.à r.l. et Cie, S.C.A."
+  hq_country: LU
+  parent_company: "PayPal Holdings, Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["global"]
+  notes: "For merchants in the EU/EEA, Braintree is provided by PayPal (Europe) S.à r.l. et Cie, S.C.A. (Luxembourg, R.C.S. B 118 349), part of the US PayPal group. UK merchants moved to PayPal UK Ltd in November 2023. No EU-only data option found."
+detect:
+  npm: ["braintree", "braintree-web", "braintree-web-drop-in"]
+  pypi: ["braintree"]
+  env: ["BRAINTREE_MERCHANT_ID", "BRAINTREE_PUBLIC_KEY", "BRAINTREE_PRIVATE_KEY", "BRAINTREE_ENVIRONMENT"]
+  domains: ["api.braintreegateway.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [mollie, adyen]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://www.paypal.com/legalhub/braintree/payment-services-agreement
+    claim: "Braintree Payment Services Agreement entered into by PayPal (Europe) S.à r.l. et Cie, S.C.A. (provider's own agreement)"
+  - url: https://www.paypal.com/je/legalhub/braintree/ach-service
+    claim: "For merchants with seats in the EU and Norway, Braintree is provided by PayPal (Europe) S.à r.l. et Cie, S.C.A. (provider's own page)"
+last_verified_at: 2026-10-31

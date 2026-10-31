@@ -1,0 +1,38 @@
+{
+  "name": "@openstatus/emails",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./src/client": "./src/client.tsx",
+    "./src/*": "./src/*.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "dev:email": "email dev",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openstatus/utils": "workspace:*",
+    "@t3-oss/env-core": "catalog:",
+    "effect": "catalog:",
+    "marked": "catalog:",
+    "react": "catalog:",
+    "react-email": "catalog:",
+    "resend": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/test-utils": "workspace:*",
+    "@openstatus/tsconfig": "workspace:*",
+    "@react-email/ui": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

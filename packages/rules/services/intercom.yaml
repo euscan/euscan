@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: intercom
+name: Intercom
+category: support-chat
+status: draft
+bucket: personal-data
+owner:
+  company: "Intercom R&D Unlimited Company"
+  hq_country: IE
+  parent_company: "Intercom, Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Intercom R&D Unlimited Company (Dublin) contracts for regional hosting; Intercom, Inc. (US) is a group affiliate and sub-processor. Default hosting is AWS us-east-1. EU hosting on AWS Dublin (app.eu.intercom.com) is only on Advanced and Expert annual plans via sales; billing and support data may still leave the EU."
+detect:
+  npm: ["@intercom/*", "intercom-client", "react-use-intercom"]
+  pypi: ["python-intercom"]
+  env: ["INTERCOM_ACCESS_TOKEN", "INTERCOM_APP_ID", "NEXT_PUBLIC_INTERCOM_APP_ID"]
+  domains: ["widget.intercom.io", "api.intercom.io", "api.eu.intercom.io"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [crisp]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://preferences.intercom.com/legal/regional-data-hosting-addendum
+    claim: "Regional Data Hosting Addendum entered into by Intercom R&D Unlimited Company, an Irish company (provider's own terms)"
+  - url: https://www.intercom.com/help/en/articles/6124430
+    claim: "EU data center on AWS eu-west-1 (Dublin); billing and support data may be transferred outside the region (provider's own help)"
+  - url: https://www.intercom.com/help/fr/articles/6124430
+    claim: "Regional Data Hosting only on Advanced and Expert annual plans (provider's own help)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: vercel
+name: Vercel
+category: hosting
+status: draft
+bucket: personal-data
+owner:
+  company: "Vercel Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US", "global CDN"]
+  notes: "Vercel Functions default to iad1 (Washington, D.C., USA) but can be pinned to EU regions such as fra1 (Frankfurt) or cdg1 (Paris). The CDN caches globally and the company is US-based. Storage add-ons may be run by other US vendors. Detection lists only packages that call Vercel's platform; general-purpose libraries published under @vercel (for example @vercel/og, @vercel/stega, @vercel/ncc, @vercel/otel) run anywhere and are not matched."
+detect:
+  npm: ["@vercel/blob", "@vercel/kv", "@vercel/postgres", "@vercel/edge-config", "@vercel/functions", "@vercel/analytics", "@vercel/speed-insights", "@vercel/flags", "@vercel/firewall", "@vercel/sandbox", "@vercel/node"]
+  pypi: []
+  env: ["VERCEL_TOKEN", "VERCEL_ORG_ID", "VERCEL_PROJECT_ID"]
+  domains: ["vercel.app", "vercel.com"]
+  docker_images: []
+  terraform_providers: ["vercel/vercel"]
+  github_actions: []
+alternatives: [scaleway, hetzner]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://vercel.com/docs/concepts/edge-network/regions
+    claim: "Vercel Functions default to running in iad1 (Washington, D.C., USA) (provider's own docs)"
+  - url: https://vercel.com/docs/functions/configuring-functions/region
+    claim: "Function region can be changed in project settings or vercel.json (provider's own docs)"
+last_verified_at: 2026-10-31

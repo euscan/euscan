@@ -1,0 +1,36 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: netlify
+name: Netlify
+category: hosting
+status: verified
+bucket: personal-data
+owner:
+  company: "Netlify, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US", "global CDN"]
+  notes: "Customers contract with Netlify, Inc., a Delaware corporation. Transfers to the US rely on Standard Contractual Clauses and the EU-US Data Privacy Framework. Netlify Forms submissions are stored by Netlify. Functions for new sites deploy to cmh (Ohio, US) by default. EU regions dub (Ireland) and fra (Frankfurt) are self-serve; cdg (Paris) and mxp (Milan) need support. lhr (London) is outside the EU."
+detect:
+  npm: ["@netlify/*", "netlify-cli"]
+  pypi: []
+  env: ["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]
+  domains: ["netlify.app", "netlify.com"]
+  docker_images: []
+  terraform_providers: ["netlify/netlify"]
+  github_actions: []
+alternatives: [bunny, scaleway]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://docs.netlify.com/build/functions/configuration/
+    claim: "By default Netlify deploys functions for new sites to cmh (Ohio); dub and fra self-serve, cdg and mxp support-assisted (provider's own docs)"
+  - url: https://answers.netlify.com/t/netlify-forms-data-center-location/24588
+    claim: "Customers contract with Netlify, Inc., a Delaware corporation; transfers to the US rely on SCCs and the Data Privacy Framework (provider staff answer quoting counsel)"
+  - url: https://www.netlify.com/privacy/
+    claim: "Privacy statement applies to Netlify, Inc. and affiliates (provider's own page)"
+last_verified_at: 2026-10-31

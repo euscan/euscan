@@ -1,0 +1,36 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: azure
+name: Microsoft Azure
+category: cloud-infra
+status: verified
+bucket: personal-data
+owner:
+  company: "Microsoft Ireland Operations Limited"
+  hq_country: IE
+  parent_company: "Microsoft Corporation (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected region"]
+  notes: "Customers choose regions, many in the EU/EFTA. Microsoft completed the EU Data Boundary in February 2025: customer data, pseudonymized personal data and support data for in-scope services stay in the EU/EFTA, with documented exceptions. The parent remains Microsoft Corporation in the US. For EMEA the billing entity is Microsoft Ireland Operations Limited; in some countries (Limited Risk Distributor model, e.g. Germany, France) a local Microsoft subsidiary sells, with MIOL as licensor."
+detect:
+  npm: ["@azure/*", "@azure-rest/*", "@ai-sdk/azure", "@microsoft/microsoft-graph-client"]
+  pypi: ["azure-identity", "azure-storage-blob", "azure-core"]
+  env: ["AZURE_CLIENT_ID", "AZURE_CLIENT_SECRET", "AZURE_TENANT_ID", "AZURE_SUBSCRIPTION_ID", "AZURE_STORAGE_CONNECTION_STRING", "AZURE_OPENAI_API_KEY", "AZURE_OPENAI_ENDPOINT"]
+  domains: ["azure.com", "windows.net", "openai.azure.com"]
+  docker_images: []
+  terraform_providers: ["hashicorp/azurerm"]
+  github_actions: ["azure/login"]
+alternatives: [ovhcloud, scaleway]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/mca-understand-your-invoice
+    claim: "For EMEA, the billing entity is Microsoft Ireland Operations Limited (MIOL); under the LRD model the local subsidiary is the selling entity and MIOL the licensor (provider's own docs)"
+  - url: https://blogs.microsoft.com/on-the-issues/2025/02/26/microsoft-completes-landmark-eu-data-boundary-offering-enhanced-data-residency-and-transparency/
+    claim: "EU Data Boundary completed February 2025 in three phases (provider's own blog)"
+  - url: https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn
+    claim: "Scope and documented exceptions of the EU Data Boundary (provider's own docs, as reported by cross-checking AIs; to verify)"
+last_verified_at: 2026-10-31

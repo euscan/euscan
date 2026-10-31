@@ -1,0 +1,11 @@
+{
+  "name": "@euscan/cli",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "description": "The euscan command: find third-party service dependencies and their EU alternatives.",
+  "type": "module",
+  "bin": { "euscan": "dist/index.js" },
+  "main": "dist/index.js",
+  "dependencies": { "@euscan/core": "*", "@euscan/rules": "*", "@euscan/shared": "*" }
+}

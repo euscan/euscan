@@ -1,0 +1,25 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+# Licence: PolyForm Shield 1.0.0 (source-available, not OSI open source), so open_source: false.
+id: bugsink
+name: Bugsink
+category: error-tracking
+owner:
+  company: "Bugsink B.V."
+  hq_country: NL
+url: https://www.bugsink.com
+open_source: false
+self_hostable: true
+feature_gaps: 
+  - "Error tracking only: no performance monitoring or session replay"
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.bugsink.com/about/
+    claim: "Bugsink B.V. based in the Netherlands; hosted service runs in the EU (provider's own page)"
+  - url: https://github.com/bugsink/bugsink/blob/main/LICENSE
+    claim: "PolyForm Shield License 1.0.0 for the main code; ee/ and bundled third-party parts under their own licences"
+  - url: https://www.bugsink.com/sentry-eu-alternative/
+    claim: "Compatible with the Sentry SDK ecosystem (provider's own page)"
+last_verified_at: 2026-10-31

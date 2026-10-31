@@ -1,0 +1,16 @@
+{
+  "repo": "mfts/papermark",
+  "commit": "ed19717ec02a1ac79aecf5569159aa9d2d869312",
+  "mustFind": [
+    "aws",
+    "google-cloud",
+    "openai",
+    "posthog",
+    "resend",
+    "stripe",
+    "vercel"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "package.json: @aws-sdk/client-s3 and others (aws), openai and @ai-sdk/openai (openai), stripe and @stripe/stripe-js (stripe), posthog-js (posthog), resend (resend), @vercel/blob, @vercel/edge-config, @vercel/functions (vercel), @ai-sdk/google-vertex (google-cloud, Vertex AI). .env.example: RESEND_API_KEY."
+}

@@ -1,0 +1,18 @@
+{
+  "repo": "calcom/cal.com",
+  "commit": "a5ee96f77edd644439e7de8c3255ccb2eb2c5941",
+  "mustFind": [
+    "cloudflare",
+    "intercom",
+    "posthog",
+    "sendgrid",
+    "sentry",
+    "stripe",
+    "twilio",
+    "vercel",
+    "zendesk"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "@sendgrid/client and SENDGRID_API_KEY (sendgrid), @sentry/* and SENTRY_DSN (sentry), stripe and STRIPE_* (stripe), @vercel/* (vercel), posthog-js and NEXT_PUBLIC_POSTHOG_KEY (posthog), react-use-intercom and NEXT_PUBLIC_INTERCOM_APP_ID (intercom), NEXT_PUBLIC_ZENDESK_KEY (zendesk widget), TWILIO_VERIFY_SID (twilio SMS verification), NEXT_PUBLIC_CLOUDFLARE_SITEKEY and CLOUDFLARE_TURNSTILE_SECRET (cloudflare Turnstile). googleapis serves Google Calendar (Workspace), not Google Cloud."
+}

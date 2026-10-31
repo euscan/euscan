@@ -1,0 +1,13 @@
+{
+  "name": "@euscan/rules",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "description": "The EUscan catalog of services and EU alternatives, with a validating loader.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist", "services", "alternatives"],
+  "dependencies": { "@euscan/shared": "*", "yaml": "^2.5.0", "zod": "^3.23.0" }
+}

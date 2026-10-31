@@ -1,0 +1,36 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: google-cloud
+name: Google Cloud / Firebase
+category: cloud-infra
+status: verified
+bucket: personal-data
+owner:
+  company: "Google Cloud EMEA Limited"
+  hq_country: IE
+  parent_company: "Google LLC (Alphabet Inc., US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected region"]
+  notes: "For Google Cloud Platform and Firebase Paid Services, customers billed in EMEA contract with Google Cloud EMEA Limited (Ireland), except France, Italy and Poland which have local Google entities; all are part of the US Google group. EU regions can be chosen; EU-only controls (EU Data Boundary via Assured Workloads) are a paid option. Firebase's data processing terms also name Google LLC."
+detect:
+  npm: ["firebase", "firebase-admin", "firebase-functions", "@firebase/*", "@google-cloud/*", "@ai-sdk/google-vertex"]
+  pypi: ["firebase-admin", "google-cloud-storage", "google-cloud-firestore", "google-cloud-bigquery"]
+  env: ["GOOGLE_VERTEX_*", "GOOGLE_APPLICATION_CREDENTIALS", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "FIREBASE_CONFIG", "FIREBASE_PROJECT_ID", "NEXT_PUBLIC_FIREBASE_API_KEY"]
+  domains: ["googleapis.com", "firebaseio.com", "firebaseapp.com"]
+  docker_images: []
+  terraform_providers: ["hashicorp/google"]
+  github_actions: ["google-github-actions/auth"]
+alternatives: [scaleway, ovhcloud]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://cloud.google.com/terms/google-entity
+    claim: "EMEA except France, Italy and Poland: Google Cloud EMEA Limited is the contracting entity for Google Cloud Platform and Firebase Paid Services (provider's own page)"
+  - url: https://firebase.google.cn/terms/data-processing-terms/20200812
+    claim: "Firebase data processing terms name Google LLC, Google Ireland Limited or Google Asia Pacific as applicable (provider's own terms, archived version)"
+  - url: https://docs.cloud.google.com/assured-workloads/docs/eu-sovereign-controls-restrictions-limitations
+    claim: "EU Data Boundary control package restricts resources to EU regions (provider's own docs)"
+last_verified_at: 2026-10-31

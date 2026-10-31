@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: openai
+name: OpenAI API
+category: ai-llm
+status: draft
+bucket: personal-data
+owner:
+  company: "OpenAI Ireland Limited"
+  hq_country: IE
+  parent_company: "OpenAI (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "OpenAI Ireland Limited contracts with EEA customers; the group parent is in the US. Default processing is US/global. Since 5 February 2025 eligible API customers can create new Projects with European data residency (eu.api.openai.com, zero data retention); existing Projects cannot be moved and system/account data may still be processed outside the EU."
+detect:
+  npm: ["openai", "@openai/*", "@ai-sdk/openai", "@langchain/openai"]
+  pypi: ["openai", "langchain-openai"]
+  env: ["OPENAI_API_KEY", "OPENAI_ORG_ID", "OPENAI_ORGANIZATION", "OPENAI_PROJECT_ID"]
+  domains: ["api.openai.com", "eu.api.openai.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [mistral, scaleway]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://openai.com/index/introducing-data-residency-in-europe/
+    claim: "European data residency for eligible API customers, new Projects only, requests handled in-region with zero data retention (provider's own announcement)"
+  - url: https://openai.com/policies/services-agreement/
+    claim: "OpenAI Ireland Ltd. contracts with customers in the EEA or Switzerland (provider's own terms, as reported by three cross-checking AIs; to verify)"
+last_verified_at: 2026-10-31

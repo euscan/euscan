@@ -1,0 +1,24 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: viva-com
+name: Viva.com
+category: payments
+owner:
+  company: "Vivabank Single Member Banking S.A."
+  hq_country: GR
+url: https://www.viva.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Focus on SMB in-store and online payments; smaller developer ecosystem than Stripe"
+hosting: []
+notes: "Greek bank operating in 29 European countries. JPMorgan Chase (US) owns 48.5% of the holding company; the founders' company holds 51.5%, and the two sides have been in litigation. A US bank as near-half owner is a material non-EU influence. Hosting provider [TO VERIFY]; one AI claimed Microsoft Azure without a source."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://ffnews.com/newsarticle/viva-wallet-announces-closing-of-j-p-morgan-deal
+    claim: "J.P. Morgan closed a 48.5% stake in Viva Wallet Holdings; founders hold 51.5% (company announcement as reported)"
+  - url: https://www.americanbanker.com/payments/news/jpmorgan-sues-greek-fintech-viva-wallets-operators
+    claim: "JPMorgan filed lawsuits against Viva's founder and majority holder (news report)"
+last_verified_at: 2026-10-31

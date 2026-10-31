@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: mailchimp
+name: Mailchimp
+category: email-marketing
+status: draft
+bucket: personal-data
+owner:
+  company: "The Rocket Science Group LLC"
+  hq_country: US
+  parent_company: "Intuit Inc."
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Intuit help article: headquarters and servers in the United States; transfers rely on the EU-US Data Privacy Framework and SCCs."
+detect:
+  npm: ["@mailchimp/*"]
+  pypi: ["mailchimp-marketing", "mailchimp-transactional"]
+  env: ["MAILCHIMP_API_KEY", "MANDRILL_API_KEY"]
+  domains: ["api.mailchimp.com", "mandrillapp.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [brevo]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://quickbooks.intuit.com/learn-support/en-us/help-article/migrate-data/mailchimp-european-data-transfers/L6rhDhc1g_US_en_US
+    claim: "Headquarters and servers in the United States"
+  - url: https://www.intuit.com/privacy/statement/data-privacy-certification/
+    claim: "Intuit and Mailchimp DPF certification"
+last_verified_at: 2026-10-31

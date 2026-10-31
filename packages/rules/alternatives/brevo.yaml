@@ -1,0 +1,25 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: brevo
+name: Brevo
+category: email-marketing
+owner:
+  company: "Sendinblue SAS (trading as Brevo)"
+  hq_country: FR
+url: https://www.brevo.com
+open_source: false
+self_hostable: false
+feature_gaps: []
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://www.brevo.com/legal/notice/
+    claim: "Sendinblue SAS, 17 rue de Salneuve, 75017 Paris, RCS Paris 498 019 298 (provider's legal notice, as reported by two independent reviews)"
+  - url: https://www.societe.com/societe/sendinblue-498019298.html
+    claim: "French SAS, SIREN 498019298, Paris (company register summary, third-party)"
+  - url: https://commercemarketplace.adobe.com/partner/Sendinblue
+    claim: "Address 17 Rue Salneuve, 75017 Paris, France (third-party listing)"
+  - url: https://nuntly.com/alternatives/resend-eu
+    claim: "French email platform headquartered in Paris (third-party source)"
+last_verified_at: 2026-10-31

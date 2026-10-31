@@ -1,0 +1,118 @@
+{
+  "name": "twenty-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twentyhq/twenty.git",
+    "directory": "packages/twenty-sdk"
+  },
+  "version": "2.55.0",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "npx rimraf dist && npx vite build"
+  },
+  "keywords": [
+    "twenty",
+    "sdk",
+    "crm",
+    "application",
+    "development"
+  ],
+  "exports": {
+    "./billing": {
+      "types": "./dist/billing/index.d.ts",
+      "import": "./dist/billing/index.mjs",
+      "require": "./dist/billing/index.cjs"
+    },
+    "./define": {
+      "types": "./dist/define/index.d.ts",
+      "import": "./dist/define/index.mjs",
+      "require": "./dist/define/index.cjs"
+    },
+    "./front-component": {
+      "types": "./dist/front-component/index.d.ts",
+      "import": "./dist/front-component/index.mjs",
+      "require": "./dist/front-component/index.cjs"
+    },
+    "./logic-function": {
+      "types": "./dist/logic-function/index.d.ts",
+      "import": "./dist/logic-function/index.mjs",
+      "require": "./dist/logic-function/index.cjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.cjs"
+    },
+    "./front-component-renderer": {
+      "types": "./dist/front-component-renderer/index.d.ts",
+      "import": "./dist/front-component-renderer.mjs",
+      "require": "./dist/front-component-renderer.cjs"
+    },
+    "./front-component-renderer/build": {
+      "types": "./dist/front-component-renderer/build/index.d.ts",
+      "import": "./dist/front-component-renderer/build.mjs",
+      "require": "./dist/front-component-renderer/build.cjs"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@sniptt/guards": "^0.2.0",
+    "esbuild": "^0.28.1",
+    "preact": "^11.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "twenty-client-sdk": "workspace:*",
+    "uuid": "^13.0.2"
+  },
+  "devDependencies": {
+    "@prettier/sync": "^0.5.2",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260116.1",
+    "@vitest/coverage-v8": "^4.0.18",
+    "prettier": "^3.1.1",
+    "rollup-plugin-dts": "^6.4.1",
+    "tsc-alias": "^1.8.16",
+    "twenty-shared": "workspace:*",
+    "twenty-ui": "workspace:*",
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "engines": {
+    "node": "^24.5.0 || ^26.5.1",
+    "yarn": "^4.0.2",
+    "twenty": ">=2.49.0"
+  },
+  "typesVersions": {
+    "*": {
+      "billing": [
+        "dist/billing/index.d.ts"
+      ],
+      "define": [
+        "dist/define/index.d.ts"
+      ],
+      "front-component": [
+        "dist/front-component/index.d.ts"
+      ],
+      "logic-function": [
+        "dist/logic-function/index.d.ts"
+      ],
+      "utils": [
+        "dist/utils/index.d.ts"
+      ],
+      "front-component-renderer": [
+        "dist/front-component-renderer/index.d.ts"
+      ],
+      "front-component-renderer/build": [
+        "dist/front-component-renderer/build/index.d.ts"
+      ]
+    }
+  }
+}

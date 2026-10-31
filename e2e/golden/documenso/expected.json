@@ -1,0 +1,15 @@
+{
+  "repo": "documenso/documenso",
+  "commit": "503cd1aa1c7507ef8cadf476a7998bec7673f6d2",
+  "mustFind": [
+    "aws",
+    "azure",
+    "google-cloud",
+    "posthog",
+    "resend",
+    "stripe"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "packages/lib and apps: @aws-sdk/client-s3, @aws-sdk/client-sesv2 (aws), @google-cloud/kms, @google-cloud/secret-manager, @ai-sdk/google-vertex (google-cloud), @azure/storage-blob (azure), posthog-js, posthog-node (posthog), resend (resend), stripe (stripe). @datadog/pprof is a devDependency only, so datadog must be noise, not personal data."
+}

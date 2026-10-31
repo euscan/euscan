@@ -1,0 +1,26 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: mistral
+name: Mistral AI
+category: ai-llm
+owner:
+  company: "Mistral AI SAS"
+  hq_country: FR
+url: https://mistral.ai
+open_source: true
+self_hostable: true
+feature_gaps:
+  - "Model lineup and quality differ from OpenAI and Anthropic; check the models you need"
+hosting: []
+notes: "French SAS (RCS Paris 952 418 325). La Plateforme API data is hosted in the EU by default; a US API endpoint exists and is opt-in. Some open-weight models are Apache-2.0 and can be self-hosted. Depending on the feature, data may be temporarily transferred outside the EU. Two cross-checking AIs report the trust center lists Mistral Compute (France), Microsoft (Sweden, Norway), Google (Netherlands, Belgium; US for the US endpoint) and CoreWeave (EEA) as infrastructure subprocessors; if confirmed, US-owned providers host part of the API [TO VERIFY: trust.mistral.ai/subprocessors did not render for Claude]. Mistral models are also resold through Azure and AWS, which is a different (US) data path."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://help.mistral.ai/en/articles/347629-where-do-you-store-my-data-or-my-organization-s-data
+    claim: "Data hosted in the EU by default; US only if the US API endpoint is explicitly used; some features may transfer data temporarily outside the EU (provider's own help center)"
+  - url: https://europe-alternatives.pages.dev/en/company/mistral-ai/
+    claim: "Mistral AI SAS, RCS Paris 952 418 325, independent; EU data residency by default with opt-in US endpoint (third-party directory)"
+  - url: https://www.waimakers.com/en/resources/ai-data-security/mistral-ai
+    claim: "Data hosted in the EU by default; US hosting only via the explicit US endpoint (third-party summary of provider's help center)"
+last_verified_at: 2026-10-31

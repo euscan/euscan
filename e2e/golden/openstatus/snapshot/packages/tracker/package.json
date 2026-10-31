@@ -1,0 +1,24 @@
+{
+  "name": "@openstatus/tracker",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openstatus/db": "workspace:*",
+    "@openstatus/tinybird": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/test-utils": "workspace:*",
+    "@openstatus/tsconfig": "workspace:*",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

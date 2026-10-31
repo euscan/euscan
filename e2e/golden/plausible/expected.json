@@ -1,0 +1,8 @@
+{
+  "repo": "plausible/analytics",
+  "commit": "02cfac1517e1fef8178afe134a9b42f309f1aa77",
+  "mustFind": [],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "EU (Estonia) Elixir app. Its JavaScript manifests contain no third-country service SDKs and there is no env template, so nothing must be found. Expected grade A."
+}

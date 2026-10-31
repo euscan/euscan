@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: checkout-com
+name: Checkout.com
+category: payments
+status: draft
+bucket: known-exposure
+owner:
+  company: "Checkout SAS"
+  hq_country: FR
+  parent_company: "Checkout.com group, headquartered in the UK"
+jurisdiction:
+  third_country: false
+  cloud_act_exposure: unknown
+data:
+  may_process_personal_data: true
+  locations: ["EU", "GB"]
+  notes: "For France and the EEA the contracting entity is Checkout SAS (Paris, 841033970), an ACPR-licensed e-money institution; UK customers contract with Checkout Ltd. The group is headquartered in London (UK adequacy). A cross-checking AI reports AWS, Google Cloud and Snowflake as sub-processors in its trust center [TO VERIFY]; the privacy notice describes transfers to group companies and service providers under SCCs."
+detect:
+  npm: ["checkout-sdk-node", "@checkout.com/*"]
+  pypi: ["checkout-sdk"]
+  env: ["CHECKOUT_SECRET_KEY", "CHECKOUT_PUBLIC_KEY", "CKO_SECRET_KEY", "CKO_PUBLIC_KEY"]
+  domains: ["api.checkout.com", "cdn.checkout.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [adyen, worldline]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://www.checkout.com/legal/country-terms
+    claim: "Contracting entity Checkout SAS, incorporated in France with company number 841033970 (provider's own terms)"
+  - url: https://www.checkout.com/legal/certificates
+    claim: "Checkout Ltd licensed by the UK FCA; Checkout SAS offers services in EEA member states (provider's own page)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: zendesk
+name: Zendesk
+category: support-chat
+status: draft
+bucket: personal-data
+owner:
+  company: "Zendesk, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["no commitment without add-on"]
+  notes: "Without the Data Center Location add-on (or a Suite that includes it), Zendesk makes no commitment on where Service Data is hosted. With it, covered functionality can be hosted in the EEA; some products and secondary data are excluded. Zendesk International Limited (Ireland) acts as payment agent for non-USD billing; the contracting party for EEA customers is [TO VERIFY]."
+detect:
+  npm: ["node-zendesk", "@zendesk/*"]
+  pypi: ["zenpy"]
+  env: ["ZENDESK_*", "NEXT_PUBLIC_ZENDESK_*"]
+  domains: ["zendesk.com", "zdassets.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [crisp, zammad]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://support.zendesk.com/hc/en-us/articles/4408883599130-Regional-Data-Hosting-Policy
+    claim: "Without regional hosting entitlement Zendesk makes no commitments on the hosting location of Service Data (provider's own policy)"
+  - url: https://www.zendesk.hk/company/customers-partners/master-subscription-agreement-2019-07-03/
+    claim: "Zendesk International Limited (Ireland, No. 519184) may be designated payment agent (provider's own archived agreement)"
+last_verified_at: 2026-10-31

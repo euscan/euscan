@@ -1,0 +1,19 @@
+{
+  "name": "@openstatus/test-utils",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./vitest": "./src/vitest.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

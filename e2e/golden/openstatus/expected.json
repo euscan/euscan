@@ -1,0 +1,16 @@
+{
+  "repo": "openstatusHQ/openstatus",
+  "commit": "f8057fbe1f17e8eef6b0fc7c28b73cbccdaa0a62",
+  "mustFind": [
+    "anthropic",
+    "aws",
+    "google-cloud",
+    "resend",
+    "sentry",
+    "stripe",
+    "vercel"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "@ai-sdk/anthropic (anthropic), @aws-sdk/client-s3 (aws), @google-cloud/pubsub and @google-cloud/tasks (google-cloud), @sentry/nextjs, @sentry/node and NEXT_PUBLIC_SENTRY_DSN (sentry), @vercel/blob (vercel), resend and RESEND_API_KEY (resend), stripe and STRIPE_SECRET_KEY (stripe). next-plausible is EU."
+}

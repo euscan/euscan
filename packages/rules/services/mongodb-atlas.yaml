@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: mongodb-atlas
+name: MongoDB Atlas
+category: database
+status: draft
+bucket: personal-data
+owner:
+  company: "MongoDB Limited"
+  hq_country: IE
+  parent_company: "MongoDB, Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected AWS, Azure or Google Cloud region"]
+  notes: "Outside the Americas the counterparty is MongoDB Limited (Ireland), part of the US MongoDB group. Clusters run on AWS, Azure or Google Cloud in a chosen region. Some features (Atlas Charts, Data Federation, Online Archive queries) are not regionalized."
+detect:
+  npm: ["mongodb", "mongoose"]
+  pypi: ["pymongo", "motor"]
+  env: ["MONGODB_URI", "MONGO_URI", "MONGODB_URL", "ATLAS_URI"]
+  domains: ["mongodb.net"]
+  docker_images: []
+  terraform_providers: ["mongodb/mongodbatlas"]
+  github_actions: []
+alternatives: [scaleway, ovhcloud]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://mongodb.com/cloud-terms-and-conditions
+    claim: "Customers located outside the Americas contract with MongoDB Limited (provider's own terms)"
+  - url: https://www.mongodb.com/docs/atlas/atlas-data-processing
+    claim: "Atlas can localize data processing by region; Charts, Data Federation and Online Archive queries are not regionalized (provider's own docs)"
+  - url: https://www.mongodb.com/products/platform/trust/subprocessors
+    claim: "Cloud providers Amazon Web Services, Google and Microsoft; affiliates include MongoDB, Inc. (US) and MongoDB Ltd. (Ireland) (provider's own page)"
+last_verified_at: 2026-10-31

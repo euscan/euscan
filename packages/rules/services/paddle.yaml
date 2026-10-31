@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: paddle
+name: Paddle
+category: payments
+status: draft
+bucket: known-exposure
+owner:
+  company: "Paddle.com Market Limited"
+  hq_country: GB
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: partly
+data:
+  may_process_personal_data: true
+  locations: ["GB", "IE", "US"]
+  notes: "Merchant of record. For non-US sales the seller is Paddle.com Market Limited (England and Wales, 08172165), or Paddle Payments Limited (Ireland) for suppliers based in the UK for VAT; Paddle.com Inc. (US) handles sales to US buyers. The UK has an EU adequacy decision. An older privacy policy says personal data is processed in the UK, Ireland and the US; hosting provider for the core platform [TO VERIFY]."
+detect:
+  npm: ["@paddle/*", "paddle-sdk"]
+  pypi: ["paddle-python-sdk"]
+  env: ["PADDLE_API_KEY", "PADDLE_CLIENT_TOKEN", "NEXT_PUBLIC_PADDLE_CLIENT_TOKEN", "PADDLE_WEBHOOK_SECRET", "PADDLE_VENDOR_ID"]
+  domains: ["api.paddle.com", "cdn.paddle.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [mollie, stancer]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://www.paddle.com/legal/terms-10-2025
+    claim: "Paddle means Paddle.com Inc. for US buyers; Paddle Payments Limited for UK-VAT suppliers, or Paddle.com Market Limited otherwise (provider's own terms)"
+  - url: https://paddle.com/legal/checkout-buyer-terms
+    claim: "Paddle.com Market Limited, England and Wales, company number 8172165 (provider's own terms)"
+  - url: https://tostracker.app/document/paddle/version/442159
+    claim: "Paddle processes personal data in the UK, Republic of Ireland and the US (archived 2018 provider privacy policy)"
+last_verified_at: 2026-10-31

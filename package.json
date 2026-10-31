@@ -1,0 +1,28 @@
+{
+  "name": "euscan-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "description": "Find your third-party service dependencies, their risks and their EU alternatives.",
+  "type": "module",
+  "workspaces": [
+    "packages/shared",
+    "packages/rules",
+    "packages/core",
+    "apps/cli"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "tsc -b --pretty",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

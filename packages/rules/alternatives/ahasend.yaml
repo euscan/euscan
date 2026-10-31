@@ -1,0 +1,39 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: ahasend
+name: AhaSend
+category: email-transactional
+owner:
+  company: "AhaSend B.V."
+  hq_country: NL
+url: https://ahasend.com
+open_source: false
+self_hostable: false
+feature_gaps: []
+hosting:
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [DE, FI]
+  - provider: "DA International Group Ltd (AlphaVPS)"
+    provider_country: BG
+    locations: [BG]
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [US]
+    optional: true
+notes: "Trust page: data stored on servers AhaSend operates in Falkenstein, Nuremberg and Helsinki; Oslo and Sofia are transit only; no US hyperscalers. Privacy notice names Hetzner (Germany/Finland) and AlphaVPS (Bulgaria) as hosting processors. An optional US-based SMTP relay on Hetzner servers in the US is opt-in only; data sent through it may be transferred to the USA. Website DNS is at Cloudflare."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://ahasend.com/privacy
+    claim: "Hosting with Hetzner (Germany/Finland, optionally USA for the US-based SMTP relay) and AlphaVPS (Bulgaria); US processing only if the customer chooses it (provider's own privacy notice, sections 4 and 7)"
+  - url: https://ahasend.com/trust
+    claim: "All email content, metadata, logs and analytics stored in the EU/EEA on hardware AhaSend owns (Falkenstein, Nuremberg, Helsinki; Oslo and Sofia uplinks); website DNS at Cloudflare (provider's own page)"
+  - url: https://ahasend.com/blog/ahasend-now-incorporated-netherlands/
+    claim: "Incorporated in the Netherlands as AhaSend B.V. (provider's own blog)"
+  - url: https://ahasend.com/resend-alternative
+    claim: "EU-owned; messages, logs and metadata kept in Europe (provider's own page)"
+  - url: https://ahasend.com/blog/ahasend-vs-sendgrid-vs-resend-vs-mailgun-which-transactional-email-service-right-you
+    claim: "Incorporated in the Netherlands (provider's own page)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: supabase
+name: Supabase
+category: database
+status: draft
+bucket: personal-data
+owner:
+  company: "Supabase Pte. Ltd."
+  hq_country: SG
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: partly
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected AWS region"]
+  notes: "Default contracting entity is Supabase Pte. Ltd. (Singapore); customers buying through the AWS Marketplace contract with Supabase, Inc. (Delaware, US). The terms switched between the two entities in May 2026. Projects run on AWS in a chosen region; EU options include Frankfurt, Ireland, Paris and Stockholm. The 'Europe' grouping also includes London and Zurich, which are outside the EU. Singapore has no EU adequacy decision."
+detect:
+  npm: ["@supabase/*"]
+  pypi: ["supabase"]
+  env: ["SUPABASE_URL", "SUPABASE_ANON_KEY", "SUPABASE_SERVICE_ROLE_KEY", "NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_ANON_KEY"]
+  domains: ["supabase.co"]
+  docker_images: []
+  terraform_providers: ["supabase/supabase"]
+  github_actions: ["supabase/setup-cli"]
+alternatives: [scaleway, ovhcloud]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://supabase.com/terms
+    claim: "Contracting entity is Supabase Pte. Ltd., a Singapore corporate entity, or Supabase, Inc. (Delaware) for AWS Marketplace purchases (provider's own terms)"
+  - url: https://supabase.com/docs/guides/platform/regions
+    claim: "Available AWS regions including West EU (Ireland), West EU (Paris), Central EU (Frankfurt), North EU (Stockholm) (provider's own docs)"
+  - url: https://supabase.com/docs/guides/security/gdpr-compliance
+    claim: "The general Europe grouping also includes London and Zurich, which are not EU member states (provider's own docs)"
+last_verified_at: 2026-10-31

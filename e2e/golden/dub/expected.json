@@ -1,0 +1,13 @@
+{
+  "repo": "dubinc/dub",
+  "commit": "6b463b4bdd9ed2fd9aa416f67b5b77d317b1471e",
+  "mustFind": [
+    "anthropic",
+    "resend",
+    "stripe",
+    "vercel"
+  ],
+  "mustNotFind": [],
+  "knownFalsePositives": [],
+  "notes": "@ai-sdk/anthropic and ANTHROPIC_API_KEY (anthropic), stripe, @stripe/stripe-js and STRIPE_SECRET_KEY (stripe), resend and RESEND_API_KEY (resend), @vercel/functions, @vercel/edge-config, @vercel/og (vercel). Not in the catalog yet: PlanetScale, Upstash, Tinybird, Slack, HubSpot. CLOUDFLARE_WORKER_WEBHOOK_SECRET suggests Cloudflare Workers but is not counted."
+}

@@ -1,0 +1,32 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: plausible
+name: Plausible Analytics
+category: analytics
+owner:
+  company: "Plausible Insights OÜ"
+  hq_country: EE
+url: https://plausible.io
+open_source: true
+self_hostable: true
+feature_gaps: 
+  - "Web analytics only: no session replay, feature flags or in-depth product analytics like PostHog"
+hosting:
+  - provider: "Hetzner Online GmbH"
+    provider_country: DE
+    locations: [DE]
+  - provider: "UpCloud"
+    provider_country: FI
+    locations: [FI]
+  - provider: "Bunny"
+    provider_country: SI
+notes: "Visitor data on Hetzner in Falkenstein, Germany; UpCloud for database hosting and exports; Bunny as CDN. All three European-owned per Plausible. Exact roles to verify."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://plausible.io/eu-hosted-web-analytics
+    claim: "Hetzner (Germany), UpCloud (Finland) and Bunny (Slovenia) are the providers that touch visitor data (provider's own page, as reported)"
+  - url: https://plausible.io/privacy
+    claim: "Data controller Plausible Insights OÜ, Tartu, Estonia (provider's own page)"
+last_verified_at: 2026-10-31

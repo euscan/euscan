@@ -1,0 +1,24 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: worldline
+name: Worldline
+category: payments
+owner:
+  company: "Worldline SA"
+  hq_country: FR
+url: https://worldline.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Enterprise-oriented, sales-led onboarding; less self-serve developer experience than Stripe"
+hosting: []
+notes: "Listed French payments group, Tour Voltaire, Puteaux (RCS Nanterre 378 901 946). Reports own certified data centres in Europe for some services; default infrastructure for online merchant processing [TO VERIFY]."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://worldline.com/en-lu/compliancy/imprint
+    claim: "Trade and Companies register number Nanterre 378 901 946 (provider's own imprint)"
+  - url: https://api-avis-situation-sirene.insee.fr/identification/pdf/37890194600640
+    claim: "WORLDLINE, SIREN 378 901 946, SA, Tour Voltaire, Puteaux (official French business register)"
+last_verified_at: 2026-10-31

@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: clerk
+name: Clerk
+category: auth
+status: draft
+bucket: personal-data
+owner:
+  company: "Clerk, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Clerk's security page states regional data residency is not offered: US-hosted, EU/UK/Swiss data transferred under the Data Privacy Framework."
+detect:
+  npm: ["@clerk/*"]
+  pypi: []
+  env: ["CLERK_SECRET_KEY", "CLERK_PUBLISHABLE_KEY", "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY"]
+  domains: ["api.clerk.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [hanko]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://clerk.com/security
+    claim: "Regional data residency not offered; US-hosted"
+  - url: https://clerk.com/legal/dpf
+    claim: "Clerk, Inc. relies on the EU-US Data Privacy Framework"
+last_verified_at: 2026-10-31

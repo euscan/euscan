@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: auth0
+name: Auth0
+category: auth
+status: draft
+bucket: personal-data
+owner:
+  company: "Okta, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US", "EU (tenant region option: Frankfurt, failover Dublin)", "AU"]
+  notes: "Tenant data stays in the region chosen at tenant creation; aggregate telemetry is stored in the EU. Dashboard and support are noted as limited exceptions. The provider stays a US company."
+detect:
+  npm: ["auth0", "@auth0/*"]
+  pypi: ["auth0-python"]
+  env: ["AUTH0_SECRET", "AUTH0_CLIENT_ID", "AUTH0_CLIENT_SECRET", "AUTH0_DOMAIN", "AUTH0_ISSUER_BASE_URL"]
+  domains: []
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [hanko]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://community.auth0.com/t/customer-data-locations/104690
+    claim: "Tenant data stays in the selected region (US, EU, AU)"
+  - url: https://community.auth0.com/t/data-center-for-eu-region/150928
+    claim: "EU region data centres: Dublin and Frankfurt"
+last_verified_at: 2026-10-31

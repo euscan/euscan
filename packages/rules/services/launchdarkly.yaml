@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: launchdarkly
+name: LaunchDarkly
+category: feature-flags
+status: draft
+bucket: noise
+owner:
+  company: "Catamorphic, Co. (dba LaunchDarkly)"
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Operated by Catamorphic, Co., a Delaware corporation. A separate EU instance (eu.launchdarkly.com) runs on AWS in Frankfurt and France and keeps end-user data in the EU; operational monitoring and CDN delivery are reported to still run from the US. Flag evaluation contexts can contain user attributes."
+detect:
+  npm: ["@launchdarkly/*", "launchdarkly-js-client-sdk", "launchdarkly-node-server-sdk", "launchdarkly-react-client-sdk"]
+  pypi: ["launchdarkly-server-sdk"]
+  env: ["LAUNCHDARKLY_SDK_KEY", "LD_SDK_KEY", "LAUNCHDARKLY_CLIENT_SIDE_ID", "NEXT_PUBLIC_LAUNCHDARKLY_CLIENT_SIDE_ID"]
+  domains: ["app.launchdarkly.com", "sdk.launchdarkly.com", "app.eu.launchdarkly.com"]
+  docker_images: []
+  terraform_providers: ["launchdarkly/launchdarkly"]
+  github_actions: []
+alternatives: [unleash]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://launchdarkly.com/terms-of-service/
+    claim: "Service offered by Catamorphic, Co., a Delaware corporation, dba LaunchDarkly (provider's own terms)"
+  - url: https://docs-prod.launchdarkly.com/home/infrastructure/eu
+    claim: "The EU instance resides in the AWS Frankfurt (eu-central-1) region (provider's own docs)"
+  - url: https://launchdarkly.com/subprocessors/
+    claim: "AWS data centers in Germany and France are used if the customer chooses the EU instance (provider's own page)"
+last_verified_at: 2026-10-31

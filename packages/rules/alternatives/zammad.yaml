@@ -1,0 +1,24 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: zammad
+name: Zammad
+category: support-chat
+owner:
+  company: "Zammad GmbH"
+  hq_country: DE
+url: https://zammad.com
+open_source: true
+self_hostable: true
+feature_gaps:
+  - "Helpdesk and ticketing focus; no in-app product messaging or tours like Intercom"
+hosting: []
+notes: "Berlin-based open-source helpdesk (AGPL). Self-hosting keeps data on infrastructure you choose. Hosting provider for Zammad's own cloud [TO VERIFY on Zammad's sub-processor list]."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://geo.sig.ai/compare/crisp-chat-vs-zammad
+    claim: "Berlin-based open-source helpdesk developed by Zammad Foundation GmbH, founded 2016 (third-party)"
+  - url: https://geo.sig.ai/brands/zammad.md
+    claim: "Zammad GmbH offers hosted SaaS (Zammad Cloud) and commercial support for self-hosted deployments (third-party)"
+last_verified_at: 2026-10-31

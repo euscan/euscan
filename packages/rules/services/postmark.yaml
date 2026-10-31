@@ -1,0 +1,36 @@
+# Verified 2026-10-31: core facts checked against the provider's own pages; approved by the project lead.
+id: postmark
+name: Postmark
+category: email-transactional
+status: verified
+bucket: personal-data
+owner:
+  company: "ActiveCampaign, LLC"
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Acquired by US-based ActiveCampaign in 2022. Primary servers at Deft (formerly ServerCentral) outside Chicago, plus AWS; Postmark states it has no plans for EU servers. Message content and metadata kept 45 days by default; a paid add-on shortens this to 7 or 28 days."
+detect:
+  npm: ["postmark"]
+  pypi: ["postmarker"]
+  env: ["POSTMARK_API_TOKEN", "POSTMARK_SERVER_TOKEN"]
+  domains: ["api.postmarkapp.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [lettermint, ahasend]
+migration_effort: low
+confidence: inferred
+sources:
+  - url: https://postmarkapp.com/eu-privacy
+    claim: "Hosted at Deft (formerly ServerCentral) outside Chicago and AWS; no plans for EU servers; 45-day retention, add-on for 7 or 28 days (provider's own page)"
+  - url: https://postmarkapp.com/blog/postmark-and-dmarc-digests-acquired-by-activecampaign
+    claim: "Acquisition by ActiveCampaign (provider's own blog)"
+  - url: https://slack.com/marketplace/A8LSJN934-postmark-bot
+    claim: "Data retention 45 days; hosting ServerCentral and AWS, United States (provider listing)"
+last_verified_at: 2026-10-31

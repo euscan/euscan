@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: algolia
+name: Algolia
+category: search
+status: draft
+bucket: personal-data
+owner:
+  company: "Algolia SAS"
+  hq_country: FR
+  parent_company: "Algolia group, headquartered in the US (Algolia Holdings, Inc.) [TO VERIFY]"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: partly
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected region"]
+  notes: "Subscribers domiciled in Europe contract with Algolia SAS (Paris); others with Algolia, Inc. The group is headquartered in San Francisco, and Algolia, Inc. is a sub-processor when Algolia SAS is the contracting entity. Server providers include OVH SAS (France), HorizonIQ and Equinix (US). Search queries can contain personal data."
+detect:
+  npm: ["algoliasearch", "@algolia/*", "react-instantsearch", "instantsearch.js"]
+  pypi: ["algoliasearch"]
+  env: ["ALGOLIA_APP_ID", "ALGOLIA_API_KEY", "ALGOLIA_ADMIN_KEY", "ALGOLIA_SEARCH_KEY", "NEXT_PUBLIC_ALGOLIA_APP_ID"]
+  domains: ["algolia.net", "algolianet.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [meilisearch]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://www.algolia.com/fr/policies/infrastructure-and-sub-processors
+    claim: "Algolia SAS acts as data processor; Algolia, Inc. (US) is a sub-processor if Algolia SAS is the contracting entity (provider's own page)"
+  - url: https://algolia.com/policies/infrastructure-and-sub-processors
+    claim: "Server providers OVH SAS (France), HorizonIQ (US), Latitude.sh (Brazil), Equinix (US) (provider's own page)"
+  - url: https://europeanpurpose.com/alternative-to/algolia
+    claim: "Terms assign subscribers domiciled in Europe to Algolia SAS in Paris and others to Algolia, Inc. (third-party summary of provider's terms)"
+last_verified_at: 2026-10-31

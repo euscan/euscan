@@ -1,0 +1,36 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: aws
+name: Amazon Web Services
+category: cloud-infra
+status: draft
+bucket: personal-data
+owner:
+  company: "Amazon Web Services EMEA SARL"
+  hq_country: LU
+  parent_company: "Amazon.com, Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["customer-selected region"]
+  notes: "EEA accounts contract with Amazon Web Services EMEA SARL (Luxembourg), part of the US Amazon group. Customers choose regions, including many in the EU. The AWS European Sovereign Cloud (generally available 15 January 2026, first region in Brandenburg, Germany) is run by German GmbHs with EU-resident staff, but Amazon remains the ultimate owner."
+detect:
+  npm: ["aws-sdk", "@aws-sdk/*", "aws-cdk-lib", "aws-amplify", "@aws-amplify/*", "@ai-sdk/amazon-bedrock"]
+  pypi: ["boto3", "botocore", "aws-cdk-lib"]
+  env: ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN", "AWS_REGION", "AWS_DEFAULT_REGION"]
+  domains: ["amazonaws.com"]
+  docker_images: []
+  terraform_providers: ["hashicorp/aws"]
+  github_actions: ["aws-actions/configure-aws-credentials"]
+alternatives: [scaleway, ovhcloud, hetzner]
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://press.aboutamazon.com/aws/2026/1/aws-launches-aws-european-sovereign-cloud-and-announces-expansion-across-europe
+    claim: "AWS European Sovereign Cloud launched January 2026 in Brandenburg, operated by EU-resident staff (provider's own press release)"
+  - url: https://www.aws.eu/faq/
+    claim: "Sovereign Cloud run by German-incorporated entities; ultimate parent Amazon.com, Inc. (provider's own FAQ, as reported by cross-checking AIs; to verify)"
+  - url: https://aws.amazon.com/legal/aws-emea/
+    claim: "Amazon Web Services EMEA SARL is the contracting entity for EMEA accounts (provider's own page, as reported by a cross-checking AI; to verify)"
+last_verified_at: 2026-10-31

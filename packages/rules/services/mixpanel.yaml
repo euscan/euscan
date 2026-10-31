@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: mixpanel
+name: Mixpanel
+category: analytics
+status: draft
+bucket: personal-data
+owner:
+  company: "Mixpanel, Inc."
+  hq_country: US
+  parent_company: null
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "By default Mixpanel stores customer data in the US on Google Cloud Platform. An EU Data Residency option is free, but must be chosen when the project is created and the SDK must send to the EU endpoint (api-eu.mixpanel.com). Data arriving through a CDP is not guaranteed to stay in the EU."
+detect:
+  npm: ["mixpanel", "mixpanel-browser", "mixpanel-react-native"]
+  pypi: ["mixpanel"]
+  env: ["MIXPANEL_TOKEN", "MIXPANEL_PROJECT_TOKEN", "NEXT_PUBLIC_MIXPANEL_TOKEN"]
+  domains: ["api-js.mixpanel.com", "api.mixpanel.com", "api-eu.mixpanel.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [plausible, pirsch]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://mixpanel.com/legal/eu-data-residency
+    claim: "By default, Mixpanel stores customer data in the United States on the Google Cloud Platform (provider's own page)"
+  - url: https://docs.mixpanel.com/docs/privacy/eu-residency
+    claim: "EU residency requires the EU endpoint; data from CDPs is not guaranteed to stay in the EU (provider's own docs)"
+last_verified_at: 2026-10-31

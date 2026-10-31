@@ -1,0 +1,28 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: sinch
+name: Sinch
+category: sms-voice
+owner:
+  company: "Sinch AB"
+  hq_country: SE
+url: https://sinch.com
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "Smaller developer community and fewer tutorials than Twilio"
+hosting:
+  - provider: "Amazon Web Services"
+    provider_country: US
+  - provider: "Google"
+    provider_country: US
+notes: "Swedish company listed on Nasdaq Stockholm. Its sub-processor list reportedly names Amazon Web Services, Google LLC, Zendesk and Sinch America Inc., with US regions as well as Ireland, Germany and Sweden; exact regions per product [TO VERIFY on Sinch's own sub-processor page]. Sinch also owns Mailgun (US)."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://europeanpurpose.com/category/sms-api
+    claim: "Sinch sub-processor list names Amazon Web Services Inc., Google LLC, Zendesk Inc. and Sinch America Inc., covering US regions and Ireland, Germany, Sweden (third-party summary of provider page)"
+  - url: https://automationatlas.io/companies/sinch-ab/
+    claim: "Sinch AB, Stockholm, Nasdaq Stockholm: SINCH; acquired Mailgun in 2021 (third-party)"
+last_verified_at: 2026-10-31

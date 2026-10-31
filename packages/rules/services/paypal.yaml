@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: paypal
+name: PayPal
+category: payments
+status: draft
+bucket: known-exposure
+owner:
+  company: "PayPal (Europe) S.à r.l. et Cie, S.C.A."
+  hq_country: LU
+  parent_company: "PayPal Holdings, Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["global"]
+  notes: "EEA users contract with PayPal (Europe) S.à r.l. et Cie, S.C.A., a Luxembourg credit institution (R.C.S. Luxembourg B 118 349) supervised by the CSSF, part of the US PayPal group. No EU-only storage option was found; the user agreement describes transfers outside the EEA."
+detect:
+  npm: ["@paypal/*", "paypal-rest-sdk"]
+  pypi: ["paypalrestsdk", "paypal-checkout-serversdk"]
+  env: ["PAYPAL_CLIENT_ID", "PAYPAL_CLIENT_SECRET", "PAYPAL_SECRET", "NEXT_PUBLIC_PAYPAL_CLIENT_ID"]
+  domains: ["api-m.paypal.com", "www.paypal.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [mollie, adyen, stancer]
+migration_effort: medium
+confidence: inferred
+sources:
+  - url: https://www.paypal.com/va/legalhub/useragreement-full
+    claim: "Services provided by PayPal (Europe) S.à r.l. et Cie, S.C.A. (R.C.S. Luxembourg B 118 349) to registered users in the EEA (provider's own user agreement)"
+  - url: https://www.paypal.com/lu/webapps/mpp/ua/useragreement-full
+    claim: "Contract between the user and PayPal (Europe) S.à r.l. et Cie, S.C.A. (provider's own user agreement)"
+last_verified_at: 2026-10-31

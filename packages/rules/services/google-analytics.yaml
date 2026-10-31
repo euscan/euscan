@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: google-analytics
+name: Google Analytics (GA4)
+category: analytics
+status: draft
+bucket: personal-data
+owner:
+  company: "Google Ireland Limited"
+  hq_country: IE
+  parent_company: "Google LLC (Alphabet Inc., US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Contracting party for EEA users is Google Ireland Limited, a subsidiary of US-based Google LLC. EU traffic is collected on EU servers where the IP address is discarded, then forwarded for storage and processing, typically in the US. No option keeps all GA4 data in the EU."
+detect:
+  npm: ["@google-analytics/*", "react-ga4", "react-ga", "vue-gtag", "ga-4-react"]
+  pypi: ["google-analytics-data", "google-analytics-admin"]
+  env: ["GA_MEASUREMENT_ID", "GA_API_SECRET", "NEXT_PUBLIC_GA_ID", "NEXT_PUBLIC_GA_MEASUREMENT_ID", "GOOGLE_ANALYTICS_ID"]
+  domains: ["www.googletagmanager.com", "www.google-analytics.com", "region1.google-analytics.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: [plausible, pirsch, simple-analytics]
+migration_effort: low
+confidence: inferred
+sources:
+  - url: https://www.iubenda.com/en/help/14936-place-of-processing-customisztion-for-google-services/
+    claim: "Since 22 January 2019 the contracting party for EEA end users is Google Ireland Limited instead of Google LLC (third-party summary of Google's notice)"
+  - url: https://support.google.com/analytics/answer/12017362
+    claim: "EU data collection: IP addresses used for geolocation in the EU and discarded before data is forwarded (provider's own help page, as reported by two cross-checking AIs; to verify)"
+last_verified_at: 2026-10-31

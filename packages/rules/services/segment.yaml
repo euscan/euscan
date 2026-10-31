@@ -1,0 +1,34 @@
+# Draft entry. Facts must be checked by the project lead before status: verified.
+id: segment
+name: Segment (Twilio)
+category: analytics
+status: draft
+bucket: personal-data
+owner:
+  company: "Twilio Ireland Limited"
+  hq_country: IE
+  parent_company: "Twilio Inc. (US)"
+jurisdiction:
+  third_country: true
+  cloud_act_exposure: yes
+data:
+  may_process_personal_data: true
+  locations: ["US"]
+  notes: "Segment workspaces use US infrastructure (Oregon) by default. EU workspaces (Dublin ingestion, EU AWS storage) must be enabled through an account executive, and the region cannot be changed later. Destinations can still send data outside the EU. Twilio says new EU customers contract with its EU entity by default [TO VERIFY for Segment specifically]."
+detect:
+  npm: ["@segment/*", "analytics-node"]
+  pypi: ["segment-analytics-python", "analytics-python"]
+  env: ["SEGMENT_WRITE_KEY", "NEXT_PUBLIC_SEGMENT_WRITE_KEY"]
+  domains: ["api.segment.io", "cdn.segment.com", "events.eu1.segmentapis.com"]
+  docker_images: []
+  terraform_providers: []
+  github_actions: []
+alternatives: []
+migration_effort: high
+confidence: inferred
+sources:
+  - url: https://www.twilio.com/docs/segment/connections/regional-segment
+    claim: "Workspaces use US data residency by default; only EU workspaces store data exclusively in the EU (provider's own docs)"
+  - url: https://twilio.com/blog/expanded-data-protection-options-eu-schrems-ii
+    claim: "New EU customers are contracted through Twilio's EU entity by default (provider's own blog)"
+last_verified_at: 2026-10-31

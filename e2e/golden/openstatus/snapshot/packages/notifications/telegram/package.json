@@ -1,0 +1,22 @@
+{
+  "name": "@openstatus/notification-telegram",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@openstatus/db": "workspace:*",
+    "@openstatus/notification-base": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@openstatus/test-utils": "workspace:*",
+    "@openstatus/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

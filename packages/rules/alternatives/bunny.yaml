@@ -1,0 +1,26 @@
+# Draft entry. Facts to verify on the provider's own legal pages.
+id: bunny
+name: bunny.net
+category: cdn
+owner:
+  company: "BunnyWay, informacijske storitve d.o.o."
+  hq_country: SI
+url: https://bunny.net
+open_source: false
+self_hostable: false
+feature_gaps:
+  - "No equivalent to Cloudflare's full security suite (Zero Trust, enterprise WAF features)"
+hosting:
+  - provider: "BunnyWay d.o.o."
+    provider_country: SI
+notes: "Slovenian company running its own global CDN network (AS200325). Storage zones can be limited to EU regions. Also offers edge storage, DNS, video and edge scripting."
+partner:
+  status: none
+  referral_url: null
+  disclosure: null
+sources:
+  - url: https://ipinfo.io/AS200325
+    claim: "AS200325 registered to BUNNYWAY, informacijske storitve d.o.o. (network registry data)"
+  - url: https://europeanstack.pages.dev/software/bunny-net
+    claim: "Headquartered in Ljubljana, Slovenia; EU-only storage zones and a DPA available (third-party directory)"
+last_verified_at: 2026-10-31
