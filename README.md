@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: euscan/euscan@v0
+      - uses: euscan/euscan@v0.1.0
         id: euscan
         with:
           path: .                  # optional, default "."
