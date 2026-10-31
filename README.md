@@ -39,6 +39,28 @@ Exit codes: `0` success, `1` a `--fail-on` bucket was found, `2` usage or read e
 
 In JSON output, `grade` is `"A"`–`"E"` or `"not-assessed"`. Treat `"not-assessed"` as "no result", not as a pass. `coverage` tells you how many `package.json` files and env templates were read.
 
+## GitHub Action
+
+```yaml
+name: euscan
+on: [pull_request]
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: euscan/euscan@v0
+        id: euscan
+        with:
+          path: .                  # optional, default "."
+          fail-on: personal-data   # optional, default: never fail
+      - run: echo "Grade ${{ steps.euscan.outputs.grade }}"
+```
+
+The report is printed in the log and in the job summary. The action needs only `contents: read` and sends nothing outside the runner.
+
 ## How findings are sorted
 
 - **Personal data:** services that may process personal data of your users (email, auth, analytics, error tracking…).
