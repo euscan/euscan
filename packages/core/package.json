@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@euscan/shared": "*",
-    "zod": "^3.23.0"
+    "zod": "^4.6.7"
   }
 }
